@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Curso JS - Variáveis</title>
+  </head>
+  <body>
+    <script>
+      var nome = "Gabriel";
+      var idade = 23;
+      var peso = 58.9;
+      var humano = true; //Variáveis boolean em JavaScript indicam se o valor é verdadeiro ou falso
+
+      var alunos = ["Gabriel", "Isabelle", "Rafael"]; //Vetores armazenam mais de um valor em uma variável. Cada valor é indicado dentro de []. A primeira posição do vetor se inica em "0"
+
+      //Objetos são indicados por {} e irão armazenar todas as atribuições deste objeto. Cada propriedade do objeto "aluno" é separada por ","
+      var aluno = {
+        nome: alunos[2],
+        idade: 22,
+        peso: 54.3,
+        humano: true
+      };
+
+      console.log(alunos[1]); //Usamos o [] com o valor do array que queremos buscar a informação
+      console.log(aluno.nome); //Aqui buscamos um valor do objeto selecionado
+    </script>
+
+
+  </body>
+</html>

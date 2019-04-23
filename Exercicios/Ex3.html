@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ex3</title>
+  </head>
+  <body>
+    <script>
+    
+      function temHabilidade(skills) {
+        //Resposta do site:
+       // return skills.indexOf("ReactJS") !== -1;
+       
+        
+        //código aqui
+        
+       var possuiHabilidade = skills.indexOf("ReactJS");
+        var verifica;
+
+        if (possuiHabilidade ==-1){
+            verifica = false;
+        } else {
+            verifica = true;
+        }
+        console.log(verifica);
+      }
+    
+      var skills = ["Javascript", "ReactJS", "React Native"];
+      temHabilidade(skills); // true ou false
+    </script>
+  </body>
+</html>

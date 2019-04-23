@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JS - Intervalo e TimeOut</title>
+</head>
+<body>
+    <script>
+        //Função executada várias vezes durante o intervalo definido
+        function exibeAlgo(){
+            console.log('Hello World');
+        }
+        //Neste exemplo, o console executa "Hello World" a cada 1 segundo. Colocamos a função sem () para passar o seu parâmetro e não para referencia-la
+        setInterval(exibeAlgo, 1000);
+    </script>
+
+    <script>
+        //Neste exemplo, a função é executada somente após se passar o tempo definido
+        function exibeAlgoApos(){
+            console.log('Olá Mundo Atrasado');
+        }
+        //A mensagem é exibida após 5 segundos
+        setTimeout(exibeAlgoApos, 5000);
+    </script>
+</body>
+</html>

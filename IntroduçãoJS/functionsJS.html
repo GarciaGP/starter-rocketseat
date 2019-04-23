@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-nr">
+  <head>
+    <title>Curso JS - Functions</title>
+  </head>
+  <body>
+    <script>
+      function soma(numero1, numero2) {
+        var resultado = numero1 + numero2;
+        return resultado;
+      }
+
+      //A variável "Resultado" é chamada novamente pois antes ela estava sendo vista apenas dentro do escopo da função
+      var resultado = soma(1, 2); //Enviando os parâmetros que a função irá receber em "numero1" e "numero2"
+      console.log(resultado);
+    </script>
+  </body>
+</html>
