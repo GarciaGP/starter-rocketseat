@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline</title>
+</head>
+<body>
+    <!--Referenciar DOM através do Javascript-->
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome" />
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        //Armazenando na variável a referência para o elemento input
+        //Primeiro exemplo: document indica a árvore inteira
+        //getElementbyId para buscar o elemento pelo ID na DOM
+        var inputElement = document.getElementById('nome');
+        console.log(inputElement);
+
+        //TagName busca todas as tags informadas como um vetor. Podemos especificar qual a posição da Tag
+        //Caso nenhuma posição seja definida todas as tags na DOM são retornadas.
+        var inputElement = document.getElementsByTagName('input')[0];
+
+        //ClassName busca todos os elementos com a classe informada. Também retorna um vetor.
+        var inputElement = document.getElementsByClassName('nome');
+    </script>
+</body>
+</html>
