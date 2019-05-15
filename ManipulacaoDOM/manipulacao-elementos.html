@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline</title>
+</head>
+
+<body>
+    <!--Referenciar DOM através do Javascript-->
+    <div id="app">
+        <input id="nome">
+        <button id="removeInput">Apagar Input</button>
+    </div>
+
+    <script>
+        //Criando o elemento Link
+        var linkElement = document.createElement('a');
+        //Inserindo o href no elemento criado
+        linkElement.setAttribute ('href', 'http://github.com');
+        linkElement.setAttribute('title', 'Meu Portfólio');
+
+        //Criando um texto para o elemento criado
+        var textElement = document.createTextNode('Clique aqui');
+
+        //Agora posicionando o texto criado dentro do elemento que foi criado.
+        linkElement.appendChild(textElement); //Adicionando o textElement como um "filho" do linkElement
+        //Resultado: <a href="Link">Clique aqui</a>
+
+        //Jogando o link criado dentro da div app
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        //Removendo um input 
+        var inputElement = document.querySelector('#nome');
+        var btnRemove = document.querySelector('#removeInput');
+        btnRemove.onclick = function remover(){
+            containerElement.removeChild(inputElement);
+        }
+
+        //createElement = Cria um elemento na DOM
+        //setAttribute = Cria um atributo no elemento selecionado
+        //appendChild = Cria um "filho" no elemento: <a>Filho</a>
+        //removeChild = Remove o "filho"
+    </script>
+</body>
+
+</html>
