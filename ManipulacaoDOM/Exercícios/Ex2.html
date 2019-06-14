@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 DOM</title>
+</head>
+
+<body>
+
+    <button id="square">New square</button>
+
+
+    <script>
+        var btnSquare = document.querySelector('#square');
+
+        //Essa é a função que gera uma cor aleatória
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            //Retornando a cor gerada para a função
+            return color;
+        }
+
+        //Inicio da função de criar com o clique
+        btnSquare.onclick = function () {
+
+            //Aqui estou criando a div ao clicar no botão
+            var boxElement = document.createElement('div');
+            //Temos a opção de definir uma classe já com a estilização através desse código:
+            boxElement.setAttribute('class', 'box');
+
+            //Aqui estamos estilizando pelo JS
+            boxElement.style.width = "100px";
+            boxElement.style.height = "100px";
+            boxElement.style.margin = "5px";
+            boxElement.style.backgroundColor = '#f00';
+
+            //Aqui jogamos o quadrado criado dentro da DOM
+            document.body.appendChild(boxElement);
+
+            //Caso o elemento criado receba o movimento do mouse sobre ele, a cor será alterada de acordo com a função.
+            boxElement.onmouseover = function () {
+                boxElement.style.backgroundColor = getRandomColor();
+            }
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>
