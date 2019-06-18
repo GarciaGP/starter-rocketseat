@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3 DOM</title>
+</head>
+
+<body>
+
+    <ul id="list">
+
+    </ul>
+    <script>
+
+        //Criando a array com os nomes
+        var nomes = ['Gabriel', 'Rafael', 'Igor'];
+        console.log(nomes[2]);
+
+        //Selecionando a UL
+        var list = document.querySelector('#list');
+
+        //Para cada "nome" da array "nomes" é criado um li e um texto "nome"
+        for (nome of nomes) {
+            var nomeElement = document.createElement('li');
+            var textNome = document.createTextNode(nome);
+
+            //Jogamos dentro de "nomeElement", que é a li, o texto com o nome na array
+            nomeElement.appendChild(textNome);
+            //Agora jogamos dentro da UL o item "nomeElement" que ja contém o texto.
+            list.appendChild(nomeElement);
+        }
+
+
+
+    </script>
+</body>

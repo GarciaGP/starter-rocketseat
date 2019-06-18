@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 4 DOM</title>
+</head>
+
+<body>
+
+    <input type="text" name="nome" id="input">
+    <button onclick="adicionar()">Adicionar</button>
+
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        //Criando a função para adicionar
+        function adicionar() {
+            //Selecionando a UL e o input
+            var list = document.querySelector('#list')
+            var inputNome = document.querySelector('#input');
+
+            //Afirmamos aqui que o valor do input é um texto(nome) a ser recebido
+            var nome = document.createTextNode(inputNome.value);
+            
+            
+            var listItem = document.createElement('li');
+
+            //Jogamos o texto (nome) na LI e jogamos a LI na UL
+            listItem.appendChild(nome);
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
